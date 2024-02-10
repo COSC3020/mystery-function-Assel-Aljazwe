@@ -6,7 +6,9 @@ answer to this markdown file.
 
 ```javascript
 function mystery(a) {
-    //Base case: If the array only has one element, return that element. This is the simplemost case where no further comparision is required.
+    // Base case: If the array consists of a single element, return that element directly.
+    // This condition effectively stops the recursion, as it signifies that the function has
+    // broken down the problem to its simplemost level, where no further division is necessary.
     if(a.length == 1) return a[0];
     // Recursion occurs here, it calls the mystery function with a smaller version of the initial array achieved by the slice function which in this case removes the first element of the array.
     // Then the state of the call is saved on a call stack which is used later on.

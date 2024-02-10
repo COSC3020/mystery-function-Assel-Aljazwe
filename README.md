@@ -12,7 +12,7 @@ function mystery(a) {
     if(a.length == 1) return a[0];
     // Recursion occurs here, it calls the mystery function with a smaller version of the initial array achieved by the slice function which in this case removes the first element of the array.
     // Then the state of the call is saved on a call stack which is used later on.
-    // The function will continue to keep calling itself until base case.
+    // The function will continue to keep calling itself until base case. At each step the current state of the function is constantly being saved on the call stack.
     var foo = mystery(a.slice(1, a.length))
     // After the recursive call, the function compares the largest element it found in the smaller array (foo) with the first element of the current part of the array (a[0])
     // This comparison is done with the array as it was during the time of the call which is saved thanks to the call stack.
